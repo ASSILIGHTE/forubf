@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Boyfriend Day! ♡ | My Little Doodle</title>
+    <meta name="description" content="A special hand-drawn sketchbook created just for you on Boyfriend Day.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Gaegu:wght@400;700&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sketchbook-body is-locked">
+
+    <!-- Paper Grain & Grid Overlay -->
+    <div class="paper-texture-overlay"></div>
+    <div class="notebook-grid-overlay"></div>
+
+    <!-- Background Music Audio & Floating Controls -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="public/music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="top-controls-bar">
+        <!-- Language Switcher Toggle -->
+        <button id="lang-toggle-btn" class="top-control-btn lang-toggle" aria-label="Switch Language (ID / EN)">
+            <span class="lang-flag">🌐</span>
+            <span class="lang-text" id="lang-btn-text">🇮🇩 ID | 🇬🇧 EN</span>
+        </button>
+
+        <!-- Music Toggle -->
+        <button id="music-toggle-btn" class="top-control-btn music-toggle" aria-label="Play/Pause Background Music">
+            <div class="music-icon-wrapper">
+                <svg class="music-note-svg" viewBox="0 0 24 24" width="18" height="18">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" fill="currentColor"/>
+                </svg>
+                <span class="music-wave wave1"></span>
+                <span class="music-wave wave2"></span>
+            </div>
+            <span class="music-text" id="music-btn-text">Putar Lagu ♫</span>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <main class="sketchbook-container">
+
+        <!-- ==========================================
+             WELCOME COVER PAGE (INITIAL ONLY PAGE)
+             ========================================== -->
+        <section id="welcome-page" class="welcome-section">
+            <div class="hero-card-frame">
+                
+                <!-- Washi Tapes Decorative -->
+                <div class="washi-tape top-left"></div>
+                <div class="washi-tape top-right"></div>
+
+                <!-- Corner Graphic Accents -->
+                <div class="checkerboard-corner"></div>
+
+                <div class="wavy-contour-corner">
+                    <svg viewBox="0 0 160 160" class="wavy-svg">
+                        <path d="M-10 160 C30 140 40 100 0 80 C-10 70 30 50 160 -10" fill="none" stroke="#2C221E" stroke-width="1.8"/>
+                        <path d="M-10 170 C40 150 50 110 10 90 C0 80 40 60 170 0" fill="none" stroke="#2C221E" stroke-width="1.8"/>
+                        <path d="M-10 180 C50 160 60 120 20 100 C10 90 50 70 180 10" fill="none" stroke="#2C221E" stroke-width="1.8"/>
+                    </svg>
+                </div>
+
+                <div class="ink-smudge-corner"></div>
+
+                <!-- Content Grid: Photos & Title -->
+                <div class="welcome-content-grid">
+
+                    <!-- PHOTOS CLUSTER: 3 Polaroids with Cat Doodle -->
+                    <div class="hero-photos-cluster">
+                        
+                        <!-- Top Polaroid -->
+                        <div class="polaroid-item photo-top">
+                            <div class="polaroid-inner">
+                                <img src="public/photos/photo_main.jpeg" alt="Couple Polaroid Main">
+                            </div>
+                        </div>
+
+                        <!-- Bottom-Left Polaroid -->
+                        <div class="polaroid-item photo-bottom-left">
+                            <div class="polaroid-inner">
+                                <img src="public/photos/photo2.jpeg" alt="Couple Polaroid 2">
+                            </div>
+                        </div>
+
+                        <!-- Bottom-Right Polaroid -->
+                        <div class="polaroid-item photo-bottom-right">
+                            <div class="polaroid-inner">
+                                <img src="public/photos/photo1.jpeg" alt="Couple Polaroid 3">
+                            </div>
+                        </div>
+
+                        <!-- Cute Black Cat Doodle sitting on Polaroid -->
+                        <div class="black-cat-doodle">
+                            <svg viewBox="0 0 120 100" class="cat-svg">
+                                <path d="M30 65 Q25 45 45 35 Q65 25 85 45 Q95 55 90 70 Q85 85 65 85 Q45 85 30 65 Z" fill="#2C221E" stroke="#2C221E" stroke-width="2"/>
+                                <path d="M38 38 L30 15 L50 28 Z" fill="#2C221E"/>
+                                <path d="M55 28 L72 12 L70 34 Z" fill="#2C221E"/>
+                                <circle cx="50" cy="35" r="18" fill="#2C221E"/>
+                                <ellipse cx="44" cy="32" rx="3" ry="4" fill="#FFFFFF"/>
+                                <ellipse cx="56" cy="32" rx="3" ry="4" fill="#FFFFFF"/>
+                                <circle cx="45" cy="32" r="1.5" fill="#2C221E"/>
+                                <circle cx="55" cy="32" r="1.5" fill="#2C221E"/>
+                                <path d="M32 35 L18 32 M32 38 L16 39 M68 35 L82 32 M68 38 L84 39" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M38 75 Q38 88 44 88 Q50 88 50 75 Z" fill="#2C221E" stroke="#FFFFFF" stroke-width="1"/>
+                                <path d="M58 75 Q58 88 64 88 Q70 88 70 75 Z" fill="#2C221E" stroke="#FFFFFF" stroke-width="1"/>
+                                <path d="M85 60 Q105 50 100 35 Q95 25 90 35" fill="none" stroke="#2C221E" stroke-width="5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <!-- Sparkles -->
+                        <div class="doodle-sparkle sp-1">✦</div>
+                        <div class="doodle-sparkle sp-2">✨</div>
+                    </div>
+
+                    <!-- TEXT CONTAINER -->
+                    <div class="welcome-text-container">
+                        
+                        <div class="badge-doodle">
+                            <span class="badge-text" data-i18n="badgeText">Edisi Buku Coretan Spesial</span>
+                        </div>
+
+                        <!-- Title Block -->
+                        <div class="main-typography">
+                            <h1 class="hero-doodle-title">
+                                <span class="txt-happy" data-i18n="txtHappy">HAPPY</span>
+                                <span class="txt-boyfriend" data-i18n="txtBoyfriend">Boyfriend</span>
+                                <span class="txt-day" data-i18n="txtDay">DAY ♡</span>
+                            </h1>
+                            <p class="hero-subtext" data-i18n="heroSubtext">Aku buat sesuatu yang manis khusus untuk orang favoritku.</p>
+                        </div>
+
+                        <!-- Question Pill Box -->
+                        <div class="gift-question-box">
+                            <div class="question-pill-header" data-i18n="questionHeader">
+                                KAMU MAU LIHAT HADIAH DARI AKU?
+                            </div>
+
+                            <div class="question-buttons-row">
+                                <button id="yes-btn" class="pill-btn btn-yes" data-i18n="btnYes">Mau! ♡</button>
+                                <button id="no-btn" class="pill-btn btn-no" data-i18n="btnNo">Enggak</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             REST OF THE SKETCHBOOK CONTENT (HIDDEN UNTIL CLICKED)
+             ========================================== -->
+        <div id="sketchbook-main-content" class="sketchbook-main-content content-hidden">
+
+            <!-- ==========================================
+                 SECTION 1 — "THINGS I LIKE ABOUT YOU"
+                 ========================================== -->
+            <section id="section-1" class="sketch-section">
+                <div class="section-header">
+                    <div class="section-badge" data-i18n="sec1Badge">Bagian 01</div>
+                    <h2 class="section-title" data-i18n="sec1Title">Hal-Hal yang Aku Suka Dari Kamu... ♡</h2>
+                    <div class="title-underline">
+                        <svg viewBox="0 0 300 20" class="underline-svg">
+                            <path d="M5 12 Q75 3 150 12 T295 10" class="draw-path-scroll"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="sticky-notes-grid">
+                    <!-- Sticky Note 1 -->
+                    <div class="sticky-note note-yellow tilt-left" data-note="1">
+                        <div class="tape-strip top-center"></div>
+                        <div class="note-icon">
+                            <svg viewBox="0 0 50 50">
+                                <circle cx="25" cy="25" r="18" fill="none" stroke="#2C221E" stroke-width="2.5"/>
+                                <circle cx="18" cy="20" r="2.5" fill="#2C221E"/>
+                                <circle cx="32" cy="20" r="2.5" fill="#2C221E"/>
+                                <path d="M16 28 Q25 37 34 28" fill="none" stroke="#2C221E" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="note-text" data-i18n="note1Text">senyuman kamu :)</h3>
+                        <p class="note-subtext" data-i18n="note1Sub">Selalu bikin hariku mendadak cerah setiap hari!</p>
+                        <span class="tap-hint" data-i18n="tapHint">tekan aku! ♡</span>
+                    </div>
+
+                    <!-- Sticky Note 2 -->
+                    <div class="sticky-note note-pink tilt-right" data-note="2">
+                        <div class="tape-strip top-center"></div>
+                        <div class="note-icon">
+                            <svg viewBox="0 0 50 50">
+                                <path d="M12 20 Q25 10 38 20 Q42 32 25 42 Q8 32 12 20 Z" fill="none" stroke="#E85D75" stroke-width="2.5"/>
+                                <path d="M18 24 Q25 18 32 24" fill="none" stroke="#E85D75" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="25" cy="30" r="2" fill="#E85D75"/>
+                            </svg>
+                        </div>
+                        <h3 class="note-text" data-i18n="note2Text">bercandaan garing kamu</h3>
+                        <p class="note-subtext" data-i18n="note2Sub">Bahkan lelucon paling garing yang tetep bikin aku ketawa ngakak.</p>
+                        <span class="tap-hint" data-i18n="tapHint">tekan aku! ♡</span>
+                    </div>
+
+                    <!-- Sticky Note 3 -->
+                    <div class="sticky-note note-cream tilt-left" data-note="3">
+                        <div class="tape-strip top-center"></div>
+                        <div class="note-icon">
+                            <svg viewBox="0 0 50 50">
+                                <path d="M15 18 C15 12 20 8 25 14 C30 8 35 12 35 18 C35 26 25 34 25 34 C25 34 15 26 15 18 Z" fill="#FFB7C5" stroke="#2C221E" stroke-width="2"/>
+                                <path d="M10 38 Q25 44 40 38" fill="none" stroke="#2C221E" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="note-text" data-i18n="note3Text">cara kamu perhatian</h3>
+                        <p class="note-subtext" data-i18n="note3Sub">Selalu perhatian, penyayang, dan sering nanyain kabarku.</p>
+                        <span class="tap-hint" data-i18n="tapHint">tekan aku! ♡</span>
+                    </div>
+
+                    <!-- Sticky Note 4 -->
+                    <div class="sticky-note note-mint tilt-right" data-note="4">
+                        <div class="tape-strip top-center"></div>
+                        <div class="note-icon">
+                            <svg viewBox="0 0 50 50">
+                                <path d="M15 25 Q25 15 35 25 Q38 38 25 42 Q12 38 15 25 Z" fill="none" stroke="#2C221E" stroke-width="2.5"/>
+                                <circle cx="20" cy="24" r="4" fill="none" stroke="#2C221E" stroke-width="2"/>
+                                <circle cx="21" cy="24" r="1.5" fill="#2C221E"/>
+                                <circle cx="30" cy="24" r="4" fill="none" stroke="#2C221E" stroke-width="2"/>
+                                <circle cx="29" cy="24" r="1.5" fill="#2C221E"/>
+                                <path d="M22 30 Q25 36 28 30" fill="none" stroke="#2C221E" stroke-width="2"/>
+                                <path d="M23 32 Q25 37 27 32" fill="#E85D75"/>
+                            </svg>
+                        </div>
+                        <h3 class="note-text" data-i18n="note4Text">sisi konyol kamu</h3>
+                        <p class="note-subtext" data-i18n="note4Sub">Saat kamu joget lucu & pake suara aneh pas lagi berdua aja.</p>
+                        <span class="tap-hint" data-i18n="tapHint">tekan aku! ♡</span>
+                    </div>
+
+                    <!-- Sticky Note 5 -->
+                    <div class="sticky-note note-rose tilt-center" data-note="5">
+                        <div class="tape-strip top-center"></div>
+                        <div class="note-icon">
+                            <svg viewBox="0 0 50 50">
+                                <path d="M25 40 C25 40 8 28 8 17 C8 10 14 6 20 6 C23.5 6 25 8.5 25 8.5 C25 8.5 26.5 6 30 6 C36 6 42 10 42 17 C42 28 25 40 25 40 Z" fill="#E85D75" stroke="#2C221E" stroke-width="2"/>
+                                <path d="M20 18 L25 14 L30 18" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="note-text" data-i18n="note5Text">ya… kamu ♡</h3>
+                        <p class="note-subtext" data-i18n="note5Sub">Semua hal tentang kamu. Apa adanya kamu, setiap hari.</p>
+                        <span class="tap-hint" data-i18n="tapHint">tekan aku! ♡</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SECTION 2 — "OUR LITTLE MOMENTS" (SCRAPBOOK GALLERY)
+                 ========================================== -->
+            <section id="section-2" class="sketch-section">
+                <div class="section-header">
+                    <div class="section-badge" data-i18n="sec2Badge">Bagian 02</div>
+                    <h2 class="section-title" data-i18n="sec2Title">Momen-Momen Manis Kita 📸</h2>
+                    <p class="section-desc" data-i18n="sec2Desc">Klik foto mana saja untuk lihat lebih dekat!</p>
+                    <div class="title-underline">
+                        <svg viewBox="0 0 300 20" class="underline-svg">
+                            <path d="M10 10 C80 18 200 2 290 12" class="draw-path-scroll"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="scrapbook-gallery">
+                    <!-- Photo 1 -->
+                    <div class="polaroid-card rot-neg-4" data-img="public/photos/photo1.jpeg" 
+                         data-caption-id="hari itu ♡" data-sub-id="Gandengan tangan di bawah lampu jalan... ga bakal lupa."
+                         data-caption-en="that day ♡" data-sub-en="Holding hands under the streetlights... unforgettable.">
+                        <div class="washi-tape tape-top-left"></div>
+                        <div class="polaroid-img-frame">
+                            <img src="public/photos/photo1.jpeg" alt="Our moment 1" loading="lazy">
+                            <div class="photo-overlay-doodle">🔍</div>
+                        </div>
+                        <div class="polaroid-caption">hari itu ♡</div>
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div class="polaroid-card rot-pos-3" data-img="public/photos/photo2.jpeg" 
+                         data-caption-id="salah satu favoritku" data-sub-id="Senyum kamu di sini selalu bikin hatiku meleleh."
+                         data-caption-en="one of my favorites" data-sub-en="Your smile here makes my heart melt every time.">
+                        <div class="washi-tape tape-top-right"></div>
+                        <div class="polaroid-img-frame">
+                            <img src="public/photos/photo2.jpeg" alt="Our moment 2" loading="lazy">
+                            <div class="photo-overlay-doodle">🔍</div>
+                        </div>
+                        <div class="polaroid-caption">salah satu favoritku</div>
+                    </div>
+
+                    <!-- Photo 3 -->
+                    <div class="polaroid-card rot-neg-2" data-img="public/photos/photo3.jpeg" 
+                         data-caption-id="ingat yang ini?" data-sub-id="Jalan-jalan dadakan yang jadi kenangan paling indah."
+                         data-caption-en="remember this?" data-sub-en="A random little trip that turned into the best core memory.">
+                        <div class="washi-tape tape-top-left"></div>
+                        <div class="polaroid-img-frame">
+                            <img src="public/photos/photo3.jpeg" alt="Our moment 3" loading="lazy">
+                            <div class="photo-overlay-doodle">🔍</div>
+                        </div>
+                        <div class="polaroid-caption">ingat yang ini?</div>
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div class="polaroid-card rot-pos-4" data-img="public/photos/photo4.jpeg" 
+                         data-caption-id="kita yang apa adanya" data-sub-id="Bisa konyol bareng. Ga ada yang paham aku seperti kamu."
+                         data-caption-en="us being us" data-sub-en="Just being silly together. Nobody gets me like you do.">
+                        <div class="washi-tape tape-top-right"></div>
+                        <div class="polaroid-img-frame">
+                            <img src="public/photos/photo4.jpeg" alt="Our moment 4" loading="lazy">
+                            <div class="photo-overlay-doodle">🔍</div>
+                        </div>
+                        <div class="polaroid-caption">kita yang apa adanya</div>
+                    </div>
+
+                    <!-- Photo 5 -->
+                    <div class="polaroid-card rot-neg-5" data-img="public/photos/photo5.jpeg" 
+                         data-caption-id="kenangan manis lainnya" data-sub-id="Kopi hangat, makanan enak, dan teman terbaik."
+                         data-caption-en="another little memory" data-sub-en="Warm coffee, good food, and the best company ever.">
+                        <div class="washi-tape tape-top-left"></div>
+                        <div class="polaroid-img-frame">
+                            <img src="public/photos/photo5.jpeg" alt="Our moment 5" loading="lazy">
+                            <div class="photo-overlay-doodle">🔍</div>
+                        </div>
+                        <div class="polaroid-caption">kenangan manis lainnya</div>
+                    </div>
+
+                    <!-- Photo 6 -->
+                    <div class="polaroid-card rot-pos-2" data-img="public/photos/photo6.jpeg" 
+                         data-caption-id="favoritku selamanya ♡" data-sub-id="Untuk banyak petualangan dan hari-hari manis bersamamu."
+                         data-caption-en="forever my favorite ♡" data-sub-en="To many more adventures and sweet quiet days with you.">
+                        <div class="washi-tape tape-top-right"></div>
+                        <div class="polaroid-img-frame">
+                            <img src="public/photos/photo6.jpeg" alt="Our moment 6" loading="lazy">
+                            <div class="photo-overlay-doodle">🔍</div>
+                        </div>
+                        <div class="polaroid-caption">favoritku selamanya ♡</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SECTION 2.5 — "DOODLE LOVE MINI GAME"
+                 ========================================== -->
+            <section id="mini-game-section" class="sketch-section">
+                <div class="mini-game-card">
+                    <div class="washi-tape top-center"></div>
+
+                    <div class="section-header">
+                        <div class="section-badge" data-i18n="gameBadge">Mini Game 🎮</div>
+                        <h2 class="section-title" data-i18n="gameTitle">Tebak Pasangan Doodle! 💖</h2>
+                        <p class="section-desc" data-i18n="gameDesc">Cocokkan 4 pasang doodle lucu untuk membuka kupon rahasia!</p>
+                    </div>
+
+                    <!-- Game Status Board -->
+                    <div class="game-status-bar">
+                        <span class="status-item"><span data-i18n="gameMatchesLabel">Hasil: </span><strong id="game-matches-count">0</strong> / 4</span>
+                        <span class="status-item"><span data-i18n="gameMovesLabel">Langkah: </span><strong id="game-moves-count">0</strong></span>
+                        <button id="reset-game-btn" class="reset-game-btn" title="Restart Game" data-i18n="gameResetBtn">🔄 Ulangi</button>
+                    </div>
+
+                    <!-- 4x2 Cards Grid (8 Cards) -->
+                    <div class="memory-game-grid" id="memory-game-grid">
+                        <!-- Dynamically generated via script.js -->
+                    </div>
+
+                    <!-- Unlocked Reward Box -->
+                    <div id="game-reward-box" class="game-reward-box hidden">
+                        <div class="reward-icon">🎟️💖</div>
+                        <h3 class="reward-title" data-i18n="rewardTitle">Kupon Terbuka!</h3>
+                        <p class="reward-desc" data-i18n="rewardDesc">"Berlaku untuk 1 Pelukan & Ciuman Hangat Tanpa Batas kapan pun kamu mau!"</p>
+                        <span class="reward-code" data-i18n="rewardCode">KODE: BOYFRIEND-LOVE-FOREVER ♡</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SECTION 3 — "A LITTLE NOTE" (NOTEBOOK PAGE)
+                 ========================================== -->
+            <section id="section-3" class="sketch-section">
+                <div class="notebook-page-container">
+                    <div class="notebook-spiral">
+                        <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+                        <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+                        <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+                    </div>
+
+                    <div class="notebook-page-content">
+                        <div class="notebook-date hw-line" data-i18n="noteDate">Tanggal: Selamat Hari Pacar ✨</div>
+                        
+                        <h2 class="notebook-heading hw-line" data-i18n="noteHeading">“Kamu selalu bikin hari-hari biasa terasa jauh lebih spesial.”</h2>
+                        
+                        <div class="animated-underline-wrapper">
+                            <svg viewBox="0 0 400 16" class="live-underline-svg">
+                                <path id="note-underline-path" d="M5 8 Q100 2 200 10 T395 6" fill="none" stroke="#E85D75" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <div class="notebook-letter">
+                            <p class="letter-paragraph hw-line" data-i18n="noteP1">
+                                Kadang aku suka mikir, betapa beruntungnya aku punya kamu di hidupku. Kamu bikin aku merasa aman, bahagia, dan sangat dihargai. 
+                            </p>
+                            <p class="letter-paragraph hw-line" data-i18n="noteP2">
+                                Bahkan di hari yang paling sepi dan biasa aja, ngobrol sama kamu atau lihat senyum kamu langsung bikin hariku cerah lagi. Terima kasih ya sudah selalu mendengarkan, menenangkan, dan jadi orang paling favoritku di dunia.
+                            </p>
+                            <p class="letter-signature hw-line" id="note-sig-p">
+                                Selalu milikmu,<br>
+                                <span class="handwritten-sig">Dengan seluruh cintaku ♡</span>
+                            </p>
+                        </div>
+
+                        <div class="notebook-doodle flower-doodle">
+                            <svg viewBox="0 0 60 80">
+                                <path d="M30 75 Q25 45 30 25" fill="none" stroke="#2C221E" stroke-width="2.5" class="stem-path"/>
+                                <path d="M30 50 Q40 45 42 40 Q32 42 30 50" fill="#C5E1A5" stroke="#2C221E" stroke-width="1.5"/>
+                                <path d="M30 60 Q18 55 16 50 Q28 52 30 60" fill="#C5E1A5" stroke="#2C221E" stroke-width="1.5"/>
+                                <g class="flower-head">
+                                    <circle cx="30" cy="25" r="7" fill="#FFF1A8" stroke="#2C221E" stroke-width="2"/>
+                                    <circle cx="30" cy="13" r="6" fill="#FFB7C5" stroke="#2C221E" stroke-width="1.5"/>
+                                    <circle cx="42" cy="25" r="6" fill="#FFB7C5" stroke="#2C221E" stroke-width="1.5"/>
+                                    <circle cx="30" cy="37" r="6" fill="#FFB7C5" stroke="#2C221E" stroke-width="1.5"/>
+                                    <circle cx="18" cy="25" r="6" fill="#FFB7C5" stroke="#2C221E" stroke-width="1.5"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="notebook-doodle heart-doodle">
+                            <svg viewBox="0 0 40 40">
+                                <path d="M20 32 C20 32 6 22 6 13 C6 7 11 4 16 4 C18.5 4 20 6 20 6 C20 6 21.5 4 24 4 C29 4 34 7 34 13 C34 22 20 32 20 32 Z" fill="#FFB7C5" stroke="#2C221E" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SECTION 4 — "JUST US" (ILLUSTRATION & QUOTE)
+                 ========================================== -->
+            <section id="section-4" class="sketch-section">
+                <div class="just-us-card">
+                    <div class="sky-doodles">
+                        <span class="doodle-star star-1">✦</span>
+                        <span class="doodle-star star-2">★</span>
+                        <span class="doodle-star star-3">✨</span>
+                        <span class="doodle-moon">🌙</span>
+                        <span class="doodle-cloud">☁️</span>
+                    </div>
+
+                    <div class="couple-illustration-container" id="interactive-couple">
+                        <svg viewBox="0 0 260 160" class="sitting-couple-svg">
+                            <path d="M20 140 Q130 120 240 140" fill="none" stroke="#2C221E" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M50 142 L50 155 M210 142 L210 155" stroke="#2C221E" stroke-width="3" stroke-linecap="round"/>
+
+                            <!-- Left Character -->
+                            <g class="character left-char">
+                                <circle cx="100" cy="70" r="22" fill="#FAF6EE" stroke="#2C221E" stroke-width="2.5"/>
+                                <path d="M80 65 C80 48 95 45 110 48 C120 52 120 65 118 68" fill="#FAF6EE" stroke="#2C221E" stroke-width="2.5"/>
+                                <path d="M92 68 Q96 63 100 68 M106 68 Q110 63 114 68" fill="none" stroke="#2C221E" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M98 78 Q103 83 108 78" fill="none" stroke="#2C221E" stroke-width="2" stroke-linecap="round"/>
+                                <ellipse cx="91" cy="73" rx="4" ry="2.5" fill="#FFB7C5" class="blush-elem"/>
+                                <ellipse cx="113" cy="73" rx="4" ry="2.5" fill="#FFB7C5" class="blush-elem"/>
+                                <path d="M85 92 Q100 90 115 92 L120 135 L80 135 Z" fill="#FFD1DC" stroke="#2C221E" stroke-width="2.5"/>
+                                <path d="M88 135 L88 150 M102 135 L102 150" stroke="#2C221E" stroke-width="3" stroke-linecap="round"/>
+                            </g>
+
+                            <!-- Right Character -->
+                            <g class="character right-char">
+                                <circle cx="155" cy="72" r="21" fill="#FAF6EE" stroke="#2C221E" stroke-width="2.5"/>
+                                <path d="M138 68 C138 50 155 48 172 52 C178 58 175 68 175 70" fill="#FAF6EE" stroke="#2C221E" stroke-width="2.5"/>
+                                <path d="M147 70 Q151 65 155 70 M161 68 L167 72" fill="none" stroke="#2C221E" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M152 79 Q158 84 163 79" fill="none" stroke="#2C221E" stroke-width="2" stroke-linecap="round"/>
+                                <ellipse cx="146" cy="75" rx="4" ry="2.5" fill="#FFD1DC" class="blush-elem"/>
+                                <ellipse cx="167" cy="75" rx="4" ry="2.5" fill="#FFD1DC" class="blush-elem"/>
+                                <path d="M140 93 Q155 91 170 93 L175 135 L135 135 Z" fill="#FFF3B0" stroke="#2C221E" stroke-width="2.5"/>
+                                <path d="M148 135 L148 150 M162 135 L162 150" stroke="#2C221E" stroke-width="3" stroke-linecap="round"/>
+                            </g>
+
+                            <path id="char-heart" d="M127 42 C127 42 117 32 117 24 C117 18 122 15 127 19 C132 15 137 18 137 24 C137 32 127 42 127 42 Z" fill="#E85D75" stroke="#2C221E" stroke-width="2" class="beating-heart"/>
+                        </svg>
+                        <div class="tap-couple-hint" data-i18n="tapUsHint">tekan kami! &gt;///&lt;</div>
+                    </div>
+
+                    <div class="quote-box">
+                        <div class="quote-mark">“</div>
+                        <p class="just-us-quote" data-i18n="justUsQuote">
+                            Orang favoritku untuk diajak jail, ketawa bareng, dan bikin kenangan indah.
+                        </p>
+                        <div class="quote-mark right">”</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 FINAL SECTION
+                 ========================================== -->
+            <section id="final-section" class="sketch-section">
+                <div class="final-page-card">
+                    <div class="washi-tape top-center-wide"></div>
+
+                    <div class="final-header">
+                        <h2 class="final-title" data-i18n="finalTitle">Selamat Hari Pacar ♡</h2>
+                        <p class="final-subtext" data-i18n="finalSubtext">Terima kasih sudah menjadi dirimu sendiri.</p>
+                    </div>
+
+                    <div class="final-doodle-wrapper">
+                        <svg viewBox="0 0 200 140" class="final-doodle-svg">
+                            <circle cx="65" cy="45" r="18" fill="none" stroke="#2C221E" stroke-width="2.5"/>
+                            <path d="M57 43 Q61 39 65 43 M69 43 Q73 39 77 43" fill="none" stroke="#2C221E" stroke-width="2.5"/>
+                            <path d="M60 52 Q65 57 70 52" fill="none" stroke="#2C221E" stroke-width="2"/>
+                            <path d="M65 63 L65 105 M65 75 L45 90 M65 75 L85 85" stroke="#2C221E" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M65 105 L50 130 M65 105 L80 130" stroke="#2C221E" stroke-width="2.5" stroke-linecap="round"/>
+
+                            <circle cx="135" cy="45" r="18" fill="none" stroke="#2C221E" stroke-width="2.5"/>
+                            <path d="M127 43 Q131 39 135 43 M139 43 Q143 39 147 43" fill="none" stroke="#2C221E" stroke-width="2.5"/>
+                            <path d="M130 52 Q135 57 140 52" fill="none" stroke="#2C221E" stroke-width="2"/>
+                            <path d="M135 63 L135 105 M135 75 L115 85 M135 75 L155 90" stroke="#2C221E" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M135 105 L120 130 M135 105 L150 130" stroke="#2C221E" stroke-width="2.5" stroke-linecap="round"/>
+
+                            <path d="M100 70 C100 70 82 50 82 36 C82 26 91 21 100 28 C109 21 118 26 118 36 C118 50 100 70 100 70 Z" fill="#E85D75" stroke="#2C221E" stroke-width="2" class="beating-heart-large"/>
+                        </svg>
+                    </div>
+
+                    <div class="final-promise">
+                        <p class="promise-text" data-i18n="finalPromise">“Masih tetap memilihmu, setiap hari.”</p>
+                    </div>
+
+                    <div class="final-btn-wrapper">
+                        <button id="one-more-thing-btn" class="doodle-btn btn-pink">
+                            <span data-i18n="oneMoreBtn">Satu hal lagi… ♡</span>
+                        </button>
+                    </div>
+                </div>
+
+                <footer class="sketchbook-footer">
+                    <p data-i18n="footerText">Dibuat dengan segenap hatiku ♡ Selamat Hari Pacar!</p>
+                </footer>
+            </section>
+
+        </div> <!-- end sketchbook-main-content -->
+
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="photo-modal" class="modal-backdrop hidden">
+        <div class="modal-paper-card">
+            <button id="close-modal-btn" class="modal-close-btn" aria-label="Close photo view">✕</button>
+            <div class="washi-tape top-center"></div>
+            
+            <div class="modal-img-container">
+                <img id="modal-img" src="" alt="Enlarged photo moment">
+                <div class="modal-doodle top-left-star">✦</div>
+                <div class="modal-doodle bottom-right-heart">💖</div>
+                <div class="modal-doodle top-right-sparkle">✨</div>
+            </div>
+
+            <div class="modal-info">
+                <h3 id="modal-caption" class="modal-caption-text">Caption</h3>
+                <p id="modal-subtext" class="modal-subtext-text">Subtext story</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SURPRISE MODAL -->
+    <div id="surprise-modal" class="modal-backdrop hidden">
+        <div class="modal-paper-card surprise-card">
+            <button id="close-surprise-btn" class="modal-close-btn" aria-label="Close modal">✕</button>
+            <div class="washi-tape top-center"></div>
+            
+            <div class="surprise-content">
+                <div class="surprise-doodle-icon">💌</div>
+                <h3 class="surprise-title" data-i18n="surpriseTitle">Kamu adalah seluruh duniaku!</h3>
+                <p class="surprise-body" data-i18n="surpriseBody">
+                    Terima kasih sudah jadi pacar yang paling penyayang, sabar, lucu, dan selalu mendukungku. Selamat Hari Pacar, cintaku! Aku mencintaimu selamanya! 💖✨
+                </p>
+                <div class="surprise-doodle-hearts">
+                    ♡ 💖 💕 💓 💗 ♡
+                </div>
+                <button id="hug-btn" class="doodle-btn btn-yellow" style="margin-top: 15px;" data-i18n="hugBtn">
+                    Kirim Pelukan Virtual 🤗
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
